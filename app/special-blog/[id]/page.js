@@ -17,7 +17,8 @@ export default async function Page({ params }) {
     console.log(blog.id)
     return (
         <div className='mx-24 my-12'>
-            <div>Special blog</div>
+            <div>Special blog content</div>
+            <div>TO BE UPDATED</div>
 
             <div>
                 {/* <img className='my-3' width="800px" src={`${process.env.STRAPI_BASE_URL}${blog.attributes.thumbnail.data.attributes.url}`} /> */}
