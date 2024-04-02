@@ -1,4 +1,4 @@
-**Web Blog Using Strapi and Next.js**
+## Web Blog Using Strapi and Next.js
 
 This GitHub repository contains a web blog application built with Strapi, a headless CMS, and Next.js, a React framework for server-side rendering and routing. The project consists of several key components:
 
@@ -27,7 +27,7 @@ This GitHub repository contains a web blog application built with Strapi, a head
 3. Set up Strapi and configure environment variables.
 4. Start the development server: `npm run dev`
 
-## Getting Started
+### Getting Started
 First, run the development server:
 
 ```bash
