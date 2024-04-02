@@ -1,7 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**Web Blog Using Strapi and Next.js**
+
+This GitHub repository contains a web blog application built with Strapi, a headless CMS, and Next.js, a React framework for server-side rendering and routing. The project consists of several key components:
+
+### Features:
+- **Fetching Blogs**: Blogs are fetched from the Strapi API and displayed on the homepage.
+- **Individual Blog Pages**: Users can view detailed information about each blog by clicking on them.
+- **Special Blogs**: Authentication is implemented to access special blogs, requiring users to log in before viewing.
+
+### Components:
+- **Page.js**: Handles fetching and displaying blogs on the homepage.
+- **Page.js for Searching Blog/ID**: Allows users to search for specific blogs by ID and displays detailed information.
+- **Page.js for Special Blogs**: Implements authentication and displays special blogs based on user authorization.
+- **Page.js for Login**: Provides a login interface for users to authenticate and access special blogs.
+- **Action.js**: Manages login actions, setting JWT tokens upon successful authentication.
+- **Middleware.js**: Implements authentication middleware to ensure authorized access to special blogs.
+
+### Technologies Used:
+- Strapi
+- Next.js
+- React
+- Axios
+
+### Usage:
+1. Clone the repository: `git clone https://github.com/your_username/web-blog.git`
+2. Install dependencies: `npm install`
+3. Set up Strapi and configure environment variables.
+4. Start the development server: `npm run dev`
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash
@@ -20,17 +46,7 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+### License:
+This project is licensed under the [MIT License](LICENSE).
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to contribute, report issues, or suggest improvements! 🚀
