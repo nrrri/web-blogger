@@ -11,7 +11,7 @@ export default function Page() {
     const [state, formAction] = useFormState(login, iniState)
 
     return (
-        <div className='m-auto my-36 border border-grey-200 w-80 p-12 grid justify-items-center bg-white rounded-lg drop-shadow-md '>
+        <div className='m-auto my-36 border border-grey-200 w-96 p-12 grid justify-items-center bg-white rounded-lg drop-shadow-md '>
             <form action={formAction}>
                 <div className='text-2xl uppercase font-bold mb-4 grid justify-items-center'>
                     Login
@@ -26,7 +26,7 @@ export default function Page() {
                 </div>
                 <div className='mb-4'>
                 Message: 
-                <div className='text-md text-red-500 font-bold'>
+                <div className='text-xs text-red-500 font-bold truncate max-w-80'>
                     {state?.message}
                     </div>
                 </div>

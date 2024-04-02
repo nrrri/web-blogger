@@ -20,7 +20,7 @@ export async function middleware(request) {
 
     const requestHeaders = new Headers(request.headers)
     requestHeaders.set('users', JSON.stringify({username: responseJSON.username}))
-        console.log('response', responseJSON)
+        // console.log('response', responseJSON)
         return  NextResponse.next({
             request: {
                 headers: requestHeaders

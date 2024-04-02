@@ -2,6 +2,7 @@
 
 import axios from 'axios'
 import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 export async function login(prevState, formData) {
 
@@ -18,7 +19,6 @@ export async function login(prevState, formData) {
         )
 
         cookies().set('token', response.data.jwt)
-        return { message: 'Login OK!'}
     } catch (e) {
         console.log('error', e)
         let errMessage = ''
@@ -28,4 +28,6 @@ export async function login(prevState, formData) {
         }
         return { message: errMessage || 'Login fail' }
     }
+
+    redirect('/special-blogs')
 }

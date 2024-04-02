@@ -18,11 +18,18 @@ export default async function Page() {
 
   return (
     <div className='container mx-auto ml-24 m-12'>
-      <div className='text-4xl font-medium mb-6'>
-      Hello Page
+      <div className='flex items-center mx-auto'>
+        <div className='text-4xl font-medium'>
+          Hello Page
+        </div>
+        <div className='m-auto'>
+
+        </div>
+        <Link className='bg-stone-800 hover:bg-stone-900 text-white rounded-full p-2 w-32 text-center font-bold text-lg' href='/login'>Login</Link>
+
       </div>
-      
-      <div className='grid grid-cols-3 gap-2 '>
+
+      <div className='grid grid-cols-3 gap-2 mt-6'>
         {
           blogs.map((blog, index) => (
             <div className='flex flex-col m-3 p-3 py-5 items-center bg-white border border-gray-200 rounded-lg drop-shadow-md hover:-translate-y-1' key={index}>
