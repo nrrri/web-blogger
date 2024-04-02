@@ -26,9 +26,8 @@ export default async function Page() {
         {
           blogs.map((blog, index) => (
             <div className='flex flex-col m-3 p-3 py-5 items-center bg-white border border-gray-200 rounded-lg drop-shadow-md hover:-translate-y-1' key={index}>
-              {/* <div>ID: {blog.id}</div> */}
               <div className='text-3xl m-2 mb-6'>{blog.attributes.title}</div>
-              <div className='text-l h-32 m-2 mb-4 line-clamp-5 overflow-hidden'>{blog.attributes.description}</div>
+              <div className='text-l m-2 mb-4 min-h-24 line-clamp-4 overflow-hidden'>{blog.attributes.description}</div>
               <Link className='bg-indigo-400 hover:bg-indigo-500 text-slate-50 rounded-full p-2 w-32 text-center' href={`blog/${blog.id}`}>See more</Link>
             </div>
           ))

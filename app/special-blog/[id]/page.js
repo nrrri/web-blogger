@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const fetchBlog = async (id) => {
     try {
-        const response = await axios.get(`${process.env.STRAPI_BASE_URL}/api/blogs/${id}?populate=thumbnail,author`)
+        const response = await axios.get(`${process.env.STRAPI_BASE_URL}/api/special-blogs/${id}?populate=thumbnail,author`)
 
         return response.data.data
     } catch (e) {
