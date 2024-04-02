@@ -1,6 +1,6 @@
 import axios from 'axios'
 import Link from 'next/link'
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 
 
 const fetchSpecialBlogs = async () => {
@@ -10,7 +10,7 @@ const fetchSpecialBlogs = async () => {
         const response = await axios.get(
             `${process.env.STRAPI_BASE_URL}/api/special-blogs`,
             {
-                headers:{
+                headers: {
                     'Authorization': `Bearer ${token.value}`
                 }
             }
@@ -25,12 +25,16 @@ const fetchSpecialBlogs = async () => {
 
 export default async function Page() {
     const blogs = await fetchSpecialBlogs()
+    const headerList = headers()
+    const user = JSON.parse(headerList.get('users'))
+    console.log(user)
+
     console.log('blogs', blogs)
 
     return (
         <div className='container mx-auto ml-24 m-12'>
             <div className='text-4xl font-medium mb-6'>
-                Hello Special Page
+                Hello, {user.username}
             </div>
 
             <div className='grid grid-cols-3 gap-2 '>

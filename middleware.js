@@ -17,8 +17,15 @@ export async function middleware(request) {
         }
 
         const responseJSON = await response.json()
+
+    const requestHeaders = new Headers(request.headers)
+    requestHeaders.set('users', JSON.stringify({username: responseJSON.username}))
         console.log('response', responseJSON)
-        return  NextResponse.next()
+        return  NextResponse.next({
+            request: {
+                headers: requestHeaders
+            }
+        })
     } catch (e) {
         console.log('error', e)
         return NextResponse.redirect(new URL('/', request.url))
